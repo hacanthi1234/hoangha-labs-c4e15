@@ -1,0 +1,21 @@
+ctrl + shift + N: mo che do an danh
+
+dung link: https://support.google.com/accounts/answer/6010255?hl=en ( truy cap cac file thong qua python push qua web)
+
+attention: check current mail in order to verify the securities.
+		
+search google: python gmail, get to the 0.6.2 link (attention: link web pybi. có kh? nang dùng python d? down hay push
+ qua máy)
+
+Basic usage:
+
+>>> gmail = GMail('A.User <user@gmail.com>','password') (chi can ghi dung email thoi)
+>>> msg = Message('Test Message',to='xyz <xyz@xyz.com>',text='Hello')
+#                  project        ngu?i nh?n(ch? c?n di?n mail) nd thu
+>>> gmail.send(msg)
+
+
+
+
+
+
