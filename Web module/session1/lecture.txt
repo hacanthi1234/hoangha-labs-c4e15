@@ -1,0 +1,20 @@
+app = Flask(__name__) #tạo server trong máy
+
+
+if __name__ == '__main__': #khi file này được chạy trực tiếp thì toàn bộ đoạn code ở dưới mới chạy
+
+@app.route('/')  #tại cái đường dẫn / sẽ chạy hàm index ở dưới và trả về trình duyệt helloworld
+def index():
+    return "Hello world"
+
+http://127.0.0.1:5000/
+địa chỉ nhận đc là địa chỉ host ( ngay tại máy mình) (127.0.0.1) hoặc localhost
+5000 là gate pod
+
+
+@app.route('/')
+def index():
+    return render_template('index.html') trong đó index.html là file mình đã tạo để tạo 1 trang mới
+
+jinja2:
+  {% for post in posts %} cho phép coder gõ đc code python trên html 
