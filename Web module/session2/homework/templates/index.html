@@ -5,11 +5,16 @@
     <title>CUSTOMER</title>
   </head>
   <body>
-    <h1>Choose your gender</h1>
-    <a href="{{ url_for('customer', gender = 0) }}">Nam?</a>
-    <a href="{{ url_for('customer', gender = 1) }}">Nữ?</a>
-
-
+    <h1>CUSTOMER</h1>
+    {% for customer in customerslist2 %}
+      <p>{{ customer.name }}</p>
+      <p>{{ customer.yob }}</p>
+      <p>{{ customer.email }}</p>
+      <p>{{ customer.gender }}</p>
+      <p>{{ customer.phone_number }}</p>
+      <p>{{ customer.job }}</p>
+      <p>{{ customer.contacted }}</p>
+    {% endfor %}
 
   </body>
 </html>

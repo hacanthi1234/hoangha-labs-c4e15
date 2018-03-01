@@ -14,10 +14,10 @@ for i in range (50):
     print ('Saving customer', i +1, '.....')
     customer = Customer(name= fake.name(),       #gender, email, phone number, job, company, contacted
                         yob=randint(1990,2018),
-                        gender = randint(0, 1),
+                        gender = choice(["male","female"]),
                         email =fake.email(),
                         phone_number = fake.phone_number(),
                         job= fake.job(),
-                        status = choice([True, False ]))
+                        contacted = choice(["not_yet_contacted", "contacted" ]))
 
     customer.save()

@@ -1,0 +1,3 @@
+ex1:
+Không có duplicate id vì nó d?i di?n cho factor mà nó d?ng.
+ex
