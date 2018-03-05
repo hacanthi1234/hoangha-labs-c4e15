@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>mua dong ko lanh</title>
+  </head>
+  <body>
+    <h1>Admin</h1>
+
+    <table border="1px">
+      <style>
+          /* trang trí */
+              table {
+          width:100%;
+        }
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 5px;
+          text-align: left;
+        }
+        table#t01 tr:nth-child(even) {
+          background-color: #eee;
+        }
+        table#t01 tr:nth-child(odd) {
+         background-color:#fff;
+        }
+        table#t01 th {
+          background-color: black;
+          color: white;
+        }
+
+      </style>
+      <thead>
+        <th> STT </th>
+        <th> Name </th>
+        <th> Yob </th>
+        <th> Gender </th>
+        <th> Phone </th>
+        <th> Status </th>
+        <th></th>
+      </thead>
+
+      <tbody>
+        {% for service in services %}
+          <tr>
+            <td> {{loop.index}} </td>
+            <td> {{service.name}} </td>
+            <td> {{service.yob}} </td>
+            <td>
+              {{ "Nữ" if service.gender == 0 else "Nam" }}
+              <!-- bieuthuc dieu kien -->
+
+            </td>
+            <td> {{service.phone}} </td>
+            <td> {{ "Bận" if service.status == True else "Rảnh" }} </td>
+            <td>
+              <a href="#"> sửa </a>
+              <a href="{{url_for('delete', service_id= service.id)}}"> xóa </a>
+            </td>
+          </tr>
+        {% endfor %}
+
+
+
+
+
+      </tbody>
+
+    </table>
+
+  </body>
+</html>
